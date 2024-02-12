@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Persons</title>
+</head>
+<body>
+<h2>Persons List</h2>
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Can Buy Alcohol?</th>
+    </tr>
+    <tr th:each="person : ${persons}">
+        <td th:text="${person.name}"></td>
+        <td th:text="${person.age}"></td>
+        <td th:text="${person.age >= 18 ? 'Yes' : 'No'}"></td>
+    </tr>
+</table>
+</body>
+</html>
